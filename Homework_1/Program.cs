@@ -49,7 +49,19 @@ Console.WriteLine($"{numberFirst}, {numberSecond}, {numberThird}");
 Console.WriteLine("max = " + max);
 */
 
+/*
+// Решение от преподавателя через метод
+int MaxNumber(int a, int b)
+{
+    if (a > b) return a;
+    else return b;
+}
 
+int numberF = 500;
+int numberS = 144;
+int numberT = 78;
+Console.WriteLine("Наибольшее число " + MaxNumber(numberF, MaxNumber(numberS, numberT)));
+*/
 
 /*
 //Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).

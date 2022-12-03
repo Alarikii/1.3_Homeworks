@@ -51,6 +51,16 @@ void Task13()
 }
 Task13();
 */
+// Решение преподавателя
+/*
+int number = 531351;
+while (number > 1000)
+{
+    number /= 10
+    Console.WriteLine(number);
+}
+Console.WriteLine("Третья цифра числа " + number % 10);
+*/
 
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
@@ -92,4 +102,15 @@ void Task15()
     }
 }
 Task15 ();
+*/
+//Решение преподавателя
+/*
+Random rand = new Random();
+int day = rand.Next(1,8);
+string[] week = {"пн", "вт", "ср", "чт", "пт", "сб", "вс"};
+Console.WriteLine(day);
+Console.WriteLine(week[day-1]);
+if (day > 0 && day < 6) Console.WriteLine("Будний день");
+else if (day == 6 || day < 7) Console.WriteLine ("Выходной день");
+else Console.WriteLine("Некорректный ввод");
 */
