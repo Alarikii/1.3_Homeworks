@@ -1,4 +1,4 @@
-﻿//Преобразование числа формата string в массив
+﻿/* //Преобразование числа формата string в массив
 int[] StrToArray(string numString)
 {
     int number = Convert.ToInt32(numString);
@@ -86,7 +86,7 @@ void Task23()
     else Console.WriteLine("Введено неправильное число");
 }
 Task23();
-
+ */
 
 
 
