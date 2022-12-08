@@ -1,4 +1,4 @@
-﻿/* //Преобразование числа формата string в массив
+﻿//Преобразование числа формата string в массив
 int[] StrToArray(string numString)
 {
     int number = Convert.ToInt32(numString);
@@ -12,7 +12,6 @@ int[] StrToArray(string numString)
     }
     return array;
 }
-
 //Расчет расстояния между точками в 3D
 double Diagonal(int x1, int y1, int z1, int x2, int y2, int z2)
 {
@@ -22,11 +21,10 @@ double Diagonal(int x1, int y1, int z1, int x2, int y2, int z2)
 // Задача 19: Напишите программу, которая принимает на
 // вход пятизначное число и проверяет, является ли оно
 // палиндромом.
-
 void Task19()
 {
     Console.WriteLine("Введите пятизначное число");
-    string number = Console.ReadLine();
+    string number = "45654";
     int[] array = StrToArray(number);
     int length = array.Length;
     if (length == 5)
@@ -40,13 +38,36 @@ void Task19()
     }
     else Console.WriteLine("Введено неправильное число");
 }
-Task19();
+void Task19Pr()
+{
+    int number = 45654;
+    if (number >= 10000 & number <= 99999)
+    {
+        int copyNumber = number;
+        int result = 0;
+        while (copyNumber > 0)
+        {
+            int digit = copyNumber % 10;
+            result = result * 10 + digit;
+            copyNumber /= 10;
+        }
+        if (number == result)
+        {
+            Console.WriteLine($"{number} = {result}");
+            Console.WriteLine($"Число {number} палиндром");
+        }
+        else
+        {
+            Console.WriteLine($"{number} <> {result}");
+            Console.WriteLine($"Число {number} не палиндром");
+        }
+    }
+    else Console.WriteLine("Введено неправильное число");
 
-
+}
 // Задача 21: Напишите программу, которая принимает на
 // вход координаты двух точек и находит расстояние между
 // ними в 3D пространстве.
-
 void Task21()
 {
     Console.WriteLine("Введите координаты точки A по x");
@@ -65,31 +86,29 @@ void Task21()
     Console.WriteLine($"Координаты точки B ({x2}, {y2}, {z2})");
     Console.WriteLine($"Расстояние между A и B = {Math.Round(Diagonal(x1, y1, z1, x2, y2, z2), 3)}");
 }
-Task21();
-
 
 // Задача 23: Напишите программу, которая принимает на
 // вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
 void Task23()
 {
     Console.WriteLine("Введите число больше 0");
     int number = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Число" +"\t" + "Куб");
+    Console.WriteLine("Число" + "\t" + "Куб");
     if (number > 0)
     {
         for (int i = 1; i <= number; i++)
         {
-            Console.WriteLine(i + "\t" + (i*i*i));
+            Console.WriteLine(i + "\t" + (i * i * i));
         }
     }
     else Console.WriteLine("Введено неправильное число");
 }
+
+
+Task19();
+Task21();
 Task23();
- */
 
-
-
-
+Task19Pr();
 
 

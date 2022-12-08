@@ -9,7 +9,6 @@ int AToBPower(int x, int y)
     }
     return mult;
 }
-
 // Преобразование числа формата string в массив
 int[] StrToArray(string numString)
 {
@@ -24,7 +23,6 @@ int[] StrToArray(string numString)
     }
     return array;
 }
-
 // Заполнение массива случайными числами
 void FillArray(int[] array)
 {
@@ -33,7 +31,6 @@ void FillArray(int[] array)
         array[i] = new Random().Next(-10, 10);
     }
 }
-
 // Сортировка элементов массива по модулю(по возрастанию)
 void SortArray(int[] array)
 {
@@ -51,7 +48,6 @@ void SortArray(int[] array)
         }
     }
 }
-
 // Вывод массива в консоли
 void WriteArray(int[] array)
 {
@@ -93,6 +89,20 @@ void Task27()
     Console.WriteLine("Сумма цифр введенного числа = " + result);
 }
 
+void Task27Pr()
+{
+    int number = 12000001;
+
+    int sum = 0;
+    Console.Write($"Сумма цифр числа {number} равна ");
+    while(number > 0)
+    {
+        sum += number % 10;
+        number /=10;
+    }
+    Console.WriteLine(sum);
+}
+
 // Задача 29: Напишите программу, которая задаёт массив
 // из 8 случайных целых чисел и выводит отсортированный
 // по модулю массив.
@@ -110,3 +120,5 @@ void Task29()
 Task25();
 Task27();
 Task29();
+
+Task27Pr();
